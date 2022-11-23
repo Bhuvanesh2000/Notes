@@ -5,7 +5,7 @@ export default function DeleteForm({ id, setGetList, setDel }) {
     const [note, setNote] = useState({ title: "", description: "" });
 
     useEffect(() => {
-        async function getNote(_id) {
+        const getNote = async (_id) => {
             const res = await fetch(`http://localhost:5000/record/${_id}`).catch(error => {
                 window.alert(error);
                 return;
@@ -19,7 +19,7 @@ export default function DeleteForm({ id, setGetList, setDel }) {
         getNote(id)
     }, [])
 
-    async function deleteNote(_id) {
+    const deleteNote = async (_id) => {
         await fetch(`http://localhost:5000/${_id}`, {
             method: "DELETE"
         });

@@ -7,7 +7,7 @@ export default function CreateForm({ id, setUpdateNote }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        async function getNote(_id) {
+        const getNote = async (_id) => {
             const res = await fetch(`http://localhost:5000/record/${_id}`).catch(error => {
                 window.alert(error);
                 return;
