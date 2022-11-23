@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,13 +6,19 @@
     @apply p-0;
     @apply m-0;
     @apply box-border;
-    @apply tracking-wide;
+    @apply tracking-tight;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    position: relative;
 }
 
 body,
 pre {
-    font-family: "Dancing Script", cursive;
-    @apply font-semibold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 code {
@@ -35,4 +41,8 @@ code {
 
  ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }

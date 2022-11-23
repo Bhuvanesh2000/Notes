@@ -1,0 +1,7 @@
+single quotes in imports Eg: import Icon from './Icon'
+
+single quotes for accessing json Eg: firstNote['name']
+
+quotes for getElementById('id')
+
+double quotes for any attribute values Eg: className="style", type="submit"

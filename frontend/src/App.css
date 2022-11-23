@@ -1,0 +1,70 @@
+.App {
+    @apply bg-white;
+    @apply min-h-screen;
+    @apply w-screen;
+    @apply text-xl;
+    @apply p-5;
+}
+
+.button-style {
+    @apply rounded-md;
+    @apply flex;
+    @apply items-center;
+    @apply p-2;
+    @apply border;
+    @apply border-l-4;
+    @apply border-r-4;
+    @apply space-x-1;
+    @apply w-full;
+}
+
+button.button-style {
+    @apply w-max;
+}
+
+.button-style-green {
+    @apply border-green-500;
+}
+
+.button-style-blue {
+    @apply border-blue-500;
+}
+
+.button-style-gray {
+    @apply border-gray-500;
+}
+
+.button-style-purple {
+    @apply border-purple-500;
+}
+
+.button-style-red {
+    @apply border-red-500;
+}
+
+.popup-style {
+    @apply flex;
+    @apply flex-col;
+    @apply space-y-2;
+    @apply rounded-md;
+    @apply max-w-lg;
+    @apply w-full;
+    @apply p-4;
+    @apply bg-white;
+    @apply z-10;
+}
+
+.disable-bg {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-screen;
+    @apply h-screen;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply overflow-hidden;
+    @apply bg-gray-700;
+    @apply bg-opacity-60;
+    backdrop-filter: blur(3px);
+}
