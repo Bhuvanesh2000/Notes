@@ -6,7 +6,16 @@
     @apply p-5;
 }
 
-.button-style {
+button,
+button>i {
+    transition: all .3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+.button {
     @apply rounded-md;
     @apply flex;
     @apply items-center;
@@ -18,31 +27,73 @@
     @apply w-full;
 }
 
-button.button-style {
+button.button {
     @apply w-max;
 }
 
-.button-style-green {
+
+/*  */
+
+.button-green {
     @apply border-green-500;
 }
 
-.button-style-blue {
+.button-green:focus,
+.button-green:hover {
+    @apply text-white;
+    @apply bg-green-500;
+}
+
+
+/*  */
+
+.button-blue {
     @apply border-blue-500;
 }
 
-.button-style-gray {
+.button-blue:focus,
+.button-blue:hover {
+    @apply text-white;
+    @apply bg-blue-500;
+}
+
+
+/*  */
+
+.button-gray {
     @apply border-gray-500;
 }
 
-.button-style-purple {
+
+/*  */
+
+.button-purple {
     @apply border-purple-500;
 }
 
-.button-style-red {
+.button-purple:focus,
+.button-purple:hover {
+    @apply text-white;
+    @apply bg-purple-500;
+}
+
+
+/*  */
+
+.button-red {
     @apply border-red-500;
 }
 
-.popup-style {
+.button-red:focus,
+.button-red:hover {
+    @apply text-white;
+    @apply bg-red-500;
+}
+
+
+/*  */
+
+.popup {
     @apply flex;
     @apply flex-col;
     @apply space-y-2;
@@ -52,7 +103,32 @@ button.button-style {
     @apply p-4;
     @apply bg-white;
     @apply z-10;
+    @apply border-2;
+    @apply outline-white;
+    @apply outline;
 }
+
+
+/* 
+.popup-blue {
+    @apply border-blue-500;
+}
+
+.popup-gray {
+    @apply border-gray-500;
+}
+
+.popup-green {
+    @apply border-green-500;
+}
+
+.popup-red {
+    @apply border-red-500;
+}
+
+.popup-purple {
+    @apply border-purple-500;
+} */
 
 .disable-bg {
     @apply fixed;
@@ -67,4 +143,14 @@ button.button-style {
     @apply bg-gray-700;
     @apply bg-opacity-60;
     backdrop-filter: blur(3px);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+button:focus>i.material-symbols-outlined,
+button:hover>i.material-symbols-outlined,
+button:active>i.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }

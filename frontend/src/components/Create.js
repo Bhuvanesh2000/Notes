@@ -9,10 +9,10 @@ export default function Create() {
         <>
             {create && <CreateForm setCreate={setCreate} />}
             <button
-                className="button-style button-style-blue"
+                className="button button-blue"
                 onClick={() => setCreate(true)}
             >
-                <Icon name="add_box" />
+                <Icon name="add" />
                 <span>Create Note</span>
             </button>
         </>

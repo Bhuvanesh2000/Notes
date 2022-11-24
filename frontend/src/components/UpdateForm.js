@@ -48,7 +48,7 @@ export default function CreateForm({ id, setUpdateNote }) {
         <div className="disable-bg">
             <form
                 action="#"
-                className="popup-style"
+                className="popup"
                 onSubmit={() => updateNote(id)}
                 style={{ width: "500px" }}
             >
@@ -58,7 +58,7 @@ export default function CreateForm({ id, setUpdateNote }) {
                 >
                     Update Note
                 </div>
-                <div className="button-style button-style-gray">
+                <div className="button button-gray">
                     <input
                         type="text"
                         onChange={(e) => updateNoteValue({ title: e.currentTarget.value })}
@@ -69,7 +69,7 @@ export default function CreateForm({ id, setUpdateNote }) {
                         autoFocus
                     />
                 </div>
-                <div className="button-style button-style-gray">
+                <div className="button button-gray">
                     <textarea
                         placeholder="Enter a note..."
                         rows={5}
@@ -83,13 +83,13 @@ export default function CreateForm({ id, setUpdateNote }) {
                 <div className="flex w-full justify-between">
                     <button
                         type="submit"
-                        className="button-style button-style-green"
+                        className="button button-green"
                     >
                         <Icon name="done" />
                         <span>Save</span>
                     </button>
                     <button
-                        className="button-style button-style-red"
+                        className="button button-red"
                         onClick={() => closePopup()}
                     >
                         <Icon name="close" />

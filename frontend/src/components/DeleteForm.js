@@ -35,7 +35,7 @@ export default function DeleteForm({ id, setGetList, setDel }) {
         <div className="disable-bg">
             <form
                 action="#"
-                className="popup-style"
+                className="popup"
                 onSubmit={() => deleteNote(id)}
                 style={{ width: "500px" }}
             >
@@ -53,14 +53,14 @@ export default function DeleteForm({ id, setGetList, setDel }) {
                 <div className="flex w-full justify-between">
                     <button
                         type="submit"
-                        className="button-style button-style-green"
+                        className="button button-green"
                     >
                         <Icon name="done" />
                         <span>Delete</span>
                     </button>
                     <button
                         type="button"
-                        className="button-style button-style-red"
+                        className="button button-red"
                         onClick={() => closePopup()}
                     >
                         <Icon name="close" />

@@ -6,10 +6,10 @@ export default function ShowDesc({ desc }) {
 
     return (
         <div className="ml-1 flex items-start space-x-2">
-            <button onClick={() => setExpand((prev) => !prev)}>
+            <button onClick={() => setExpand((prev) => !prev)} title="expand">
                 <Icon
-                    name="expand"
-                    styles="text-blue-500 text-base"
+                    name="swap_vertical_circle"
+                    styles="text-gray-500 text-xl"
                 />
             </button>
             {expand ?

@@ -33,7 +33,7 @@ export default function CreateForm({ setCreate }) {
         <div className="disable-bg">
             <form
                 action="#"
-                className="popup-style"
+                className="popup"
                 style={{ width: "500px" }}
                 onSubmit={() => createNote()}
             >
@@ -43,16 +43,17 @@ export default function CreateForm({ setCreate }) {
                 >
                     Create a Note
                 </div>
-                <div className="button-style button-style-gray">
+                <div className="button button-gray">
                     <input
                         type="text"
                         onChange={(e) => updateNote({ title: e.currentTarget.value })}
                         placeholder="Enter a title..."
                         className="outline-none bg-transparent w-full"
                         required
+                        autoFocus
                     />
                 </div>
-                <div className="button-style button-style-gray">
+                <div className="button button-gray">
                     <textarea
                         placeholder="Enter a note..."
                         rows={5}
@@ -64,14 +65,14 @@ export default function CreateForm({ setCreate }) {
                 <div className="flex w-full justify-between">
                     <button
                         type="submit"
-                        className="button-style button-style-green"
+                        className="button button-green hover:drop-shadow-2xl"
                     >
                         <Icon name="done" />
                         <span>Add</span>
                     </button>
                     <button
                         type="button"
-                        className="button-style button-style-red"
+                        className="button button-red"
                         onClick={() => closePopup()}
                     >
                         <Icon name="close" />
