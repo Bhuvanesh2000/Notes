@@ -93,6 +93,37 @@ button.button {
 
 /*  */
 
+.desc-ext-line {
+    position: relative;
+    @apply z-0;
+}
+
+:root {
+    --desc-border-setter: 19px;
+}
+
+.desc-ext-line::before {
+    content: "";
+    height: calc(100% - var(--desc-border-setter));
+    width: 1px;
+    position: absolute;
+    top: 21px;
+    left: calc(var(--desc-border-setter) * -1);
+    @apply bg-gray-500;
+    @apply z-0;
+}
+
+
+/* .desc-ext-line::after {
+    content: "";
+    width: calc(100% + var(--desc-border-setter));
+    height: 1px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: calc(var(--desc-border-setter) * -1);
+    @apply bg-gray-500;
+} */
+
 .popup {
     @apply flex;
     @apply flex-col;
@@ -142,7 +173,8 @@ button.button {
     @apply overflow-hidden;
     @apply bg-gray-700;
     @apply bg-opacity-60;
-    backdrop-filter: blur(3px);
+    @apply z-50;
+    backdrop-filter: blur(10px);
 }
 
 .material-symbols-outlined {

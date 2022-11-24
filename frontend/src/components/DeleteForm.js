@@ -50,7 +50,7 @@ export default function DeleteForm({ id, setGetList, setDel }) {
                     Confirm to delete
                     <span className="font-bold"> {note.title} </span>?
                 </div>
-                <div className="flex w-full justify-between">
+                <div className="flex w-full justify-between !mt-5">
                     <button
                         type="submit"
                         className="button button-green"

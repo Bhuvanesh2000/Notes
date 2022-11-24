@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
 import Icon from './Icon'
 
-export default function CreateForm({ id, setUpdateNote }) {
+export default function UpdateForm({ id, setUpdateNote, setGetList }) {
     const [note, setNote] = useState({ title: "", description: "" });
-    const navigate = useNavigate();
 
     useEffect(() => {
         const getNote = async (_id) => {
@@ -37,7 +35,7 @@ export default function CreateForm({ id, setUpdateNote }) {
             return;
         });
         setUpdateNote(false);
-        navigate("/");
+        setGetList(true);
     }
 
     const closePopup = () => {

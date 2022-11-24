@@ -2,7 +2,7 @@ import Icon from './Icon';
 import UpdateForm from './UpdateForm'
 import { useState } from 'react';
 
-export default function Update({ id }) {
+export default function Update({ id, setGetList }) {
     const [updateNote, setUpdateNote] = useState(false)
 
     return (
@@ -11,6 +11,7 @@ export default function Update({ id }) {
                 <UpdateForm
                     id={id}
                     setUpdateNote={setUpdateNote}
+                    setGetList={setGetList}
                 />
             }
             <button

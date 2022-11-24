@@ -13,7 +13,7 @@ export default function ShowDesc({ desc }) {
                 />
             </button>
             {expand ?
-                <pre className="whitespace-pre-line">{desc}</pre> :
+                <pre className="whitespace-pre-line desc-ext-line">{desc}</pre> :
                 <div className="truncate w-96">{desc}</div>
             }
         </div>
