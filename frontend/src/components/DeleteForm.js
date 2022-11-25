@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Icon from './Icon'
+import Modal from 'react-modal'
 
 export default function DeleteForm({ id, setGetList, setDel }) {
     const [note, setNote] = useState({ title: "", description: "" });
@@ -32,12 +33,14 @@ export default function DeleteForm({ id, setGetList, setDel }) {
     }
 
     return (
-        <div className="disable-bg">
+        <Modal
+            isOpen={true}
+            onRequestClose={() => closePopup()}
+        >
             <form
                 action="#"
                 className="popup"
                 onSubmit={() => deleteNote(id)}
-                style={{ width: "500px" }}
             >
                 <div
                     align="center"
@@ -68,7 +71,7 @@ export default function DeleteForm({ id, setGetList, setDel }) {
                     </button>
                 </div>
             </form>
-        </div>
+        </Modal>
     )
 
 }

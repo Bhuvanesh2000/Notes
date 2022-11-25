@@ -130,29 +130,11 @@ button.button {
     @apply flex-col;
     @apply space-y-2;
     @apply rounded-md;
-    @apply max-w-lg;
+    @apply min-w-lg;
     @apply w-full;
     @apply p-4;
     @apply bg-white;
-    @apply z-10;
-    @apply border-2;
-    @apply outline-white;
-    @apply outline;
-}
-
-.disable-bg {
-    @apply fixed;
-    @apply top-0;
-    @apply left-0;
-    @apply w-screen;
-    @apply h-screen;
-    @apply flex;
-    @apply items-center;
-    @apply justify-center;
-    @apply bg-gray-700;
-    @apply bg-opacity-60;
-    @apply z-50;
-    backdrop-filter: blur(10px);
+    @apply text-lg;
 }
 
 .material-symbols-outlined {
@@ -163,8 +145,4 @@ button:focus>i.material-symbols-outlined,
 button:hover>i.material-symbols-outlined,
 button:active>i.material-symbols-outlined {
     font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-}
-
-button:hover>i.material-symbols-outlined {
-    transform: scale(1.5);
 }

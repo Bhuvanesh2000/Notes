@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Icon from './Icon'
+import Modal from 'react-modal'
 
 export default function UpdateForm({ id, setUpdateNote, setGetList }) {
     const [note, setNote] = useState({ title: "", description: "" });
@@ -43,7 +44,10 @@ export default function UpdateForm({ id, setUpdateNote, setGetList }) {
     }
 
     return (
-        <div className="disable-bg">
+        <Modal
+            isOpen={true}
+            onRequestClose={() => closePopup()}
+        >
             <form
                 action="#"
                 className="popup"
@@ -95,7 +99,7 @@ export default function UpdateForm({ id, setUpdateNote, setGetList }) {
                     </button>
                 </div>
             </form>
-        </div>
+        </Modal>
     )
 
 }

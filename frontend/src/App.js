@@ -1,6 +1,7 @@
 import './App.css';
 import DisplayNotes from './components/DisplayNotes'
 import React from 'react';
+import ModalStyles from './components/ModalStyles'
 
 function App() {
     return (

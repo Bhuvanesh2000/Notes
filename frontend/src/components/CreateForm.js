@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Icon from './Icon'
+import Modal from 'react-modal'
 
 export default function CreateForm({ setCreate, setGetList }) {
     const [note, setNote] = useState({ title: "", description: "" });
@@ -28,7 +29,10 @@ export default function CreateForm({ setCreate, setGetList }) {
     }
 
     return (
-        <div className="disable-bg">
+        <Modal
+            isOpen={true}
+            onRequestClose={() => closePopup()}
+        >
             <form
                 action="#"
                 className="popup"
@@ -78,7 +82,7 @@ export default function CreateForm({ setCreate, setGetList }) {
                     </button>
                 </div>
             </form>
-        </div>
+        </Modal>
     )
 
 }
