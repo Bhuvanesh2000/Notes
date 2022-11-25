@@ -1,9 +1,10 @@
 .App {
     @apply bg-white;
-    @apply min-h-screen;
+    @apply h-screen;
     @apply w-screen;
     @apply text-xl;
     @apply p-5;
+    @apply overflow-y-scroll;
 }
 
 button,
@@ -106,7 +107,7 @@ button.button {
     content: "";
     height: calc(100% - var(--desc-border-setter));
     width: 1px;
-    position: absolute;
+    @apply absolute;
     top: 21px;
     left: calc(var(--desc-border-setter) * -1);
     @apply bg-gray-500;
@@ -139,28 +140,6 @@ button.button {
     @apply outline;
 }
 
-
-/* 
-.popup-blue {
-    @apply border-blue-500;
-}
-
-.popup-gray {
-    @apply border-gray-500;
-}
-
-.popup-green {
-    @apply border-green-500;
-}
-
-.popup-red {
-    @apply border-red-500;
-}
-
-.popup-purple {
-    @apply border-purple-500;
-} */
-
 .disable-bg {
     @apply fixed;
     @apply top-0;
@@ -170,7 +149,6 @@ button.button {
     @apply flex;
     @apply items-center;
     @apply justify-center;
-    @apply overflow-hidden;
     @apply bg-gray-700;
     @apply bg-opacity-60;
     @apply z-50;
@@ -185,4 +163,8 @@ button:focus>i.material-symbols-outlined,
 button:hover>i.material-symbols-outlined,
 button:active>i.material-symbols-outlined {
     font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+button:hover>i.material-symbols-outlined {
+    transform: scale(1.5);
 }
