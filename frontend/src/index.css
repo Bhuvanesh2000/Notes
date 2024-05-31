@@ -14,6 +14,22 @@
     justify-content: center;
     background-color: #B9E0FF;
     position: relative;
+    animation: change-color infinite linear 60s;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: #ffb9b977;
+    }
+    33% {
+        background-color: #c1ffb977;
+    }
+    67% {
+        background-color: #b9c9ff77;
+    }
+    100% {
+        background-color: #ffb9b977;
+    }
 }
 
 body,

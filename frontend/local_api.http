@@ -1,0 +1,24 @@
+GET http://localhost:3002/notes HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3002/notes HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Note 1",
+    "content": "This is a note"
+}
+
+###
+PUT http://localhost:3002/notes/ccf0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Note 1",
+    "content": "is a note"
+}
+
+###
+DELETE http://localhost:3002/notes/ccf0 HTTP/1.1
+Content-Type: application/json
