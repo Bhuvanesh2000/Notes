@@ -95,6 +95,7 @@ button.button {
 /*  */
 
 .desc-ext-line {
+    position: relative;
     @apply z-0;
 }
 
@@ -108,7 +109,7 @@ button.button {
     width: 1px;
     @apply absolute;
     top: 21px;
-    left: 9px;
+    left: calc(var(--desc-border-setter) * -1);
     @apply bg-gray-500;
     @apply z-0;
 }
